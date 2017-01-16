@@ -1,7 +1,6 @@
 #Choose Your Adventure App Project
 
-Description
-===========
+###Description
 This is the week 9 project at Makers Academy.
 * [Tudor Tacal](https://github.com/TudorTacal)
 * [Simon Conway](https://github.com/simonconway1979)
@@ -9,8 +8,7 @@ This is the week 9 project at Makers Academy.
 * [Sara Veal](https://github.com/kwilson541)
 * [Asuka Ochi](https://github.com/fenglish)
 
-User Stories
-===========
+###User Stories
 
 ```
 As an adventure seeker  
