@@ -1,4 +1,4 @@
-#Choose Your Adventure App Project
+#Choose Your Adventure App Project [![Stories in Ready](https://badge.waffle.io/TudorTacal/choose-your-adventure.svg?label=ready&title=Ready)](http://waffle.io/TudorTacal/choose-your-adventure)
 
 ###Description
 This is the week 9 project at Makers Academy.
