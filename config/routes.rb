@@ -5,6 +5,6 @@ Rails.application.routes.draw do
          registrations: 'users/registrations'
        }
 
-  root 'welcome#index'
+  root 'game#index'
 
 end
