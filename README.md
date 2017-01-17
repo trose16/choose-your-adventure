@@ -5,7 +5,7 @@ This is the week 9 project at Makers Academy.
 * [Tudor Tacal](https://github.com/TudorTacal)
 * [Simon Conway](https://github.com/simonconway1979)
 * [Teako Warfield-Graham](https://github.com/trose16)
-* [Sara Veal](https://github.com/kwilson541)
+* [Sara Veal](https://github.com/naomipenn)
 * [Asuka Ochi](https://github.com/fenglish)
 
 ###User Stories
@@ -29,7 +29,7 @@ I want to be able to choose my city
 
 As an adventure seeker  
 So I can play an adventure that suits me  
-I want to be able to choose a theme
+I want to be able to choose an adventure
 
 As an adventure seeker  
 So that I know how to play the game  
