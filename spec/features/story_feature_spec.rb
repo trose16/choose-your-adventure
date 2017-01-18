@@ -2,17 +2,33 @@ require 'rails_helper'
 
 
 feature 'stories' do
+
+  context 'Visiting the index page' do
+
+    before do
+      sign_up('Tudor', 'tudor@email.com', '123456')
+    end
+
+    scenario "i want to see a start adventure button" do
+      visit '/'
+      expect(page).to have_content 'Start adventure'
+    end
+  end
+
+  context 'Clicking start adventure' do
+    before do
+      sign_up('Tudor', 'tudor@email.com', '123456')
+      Story.create(adventure_id: 1, description: "Starting your Jack the Ripper adventure", image_url: "http://littleatoms.com/sites/default/files/2015/jack_the_ripper_museum/jack-the-ripper-mitre-square.png", location: "co-ordinates")
+    end
+    scenario 'i want to see the first story' do
+      click_link 'Start adventure'
+      expect(page).to have_current_path('/story/1')
+    end
+  end
   context 'Visiting story profile page' do
     before do
       sign_up('Tudor', 'tudor@email.com', '123456')
-      @user = User.first
-      City.create(name: "London")
-      @city = City.first
-      Adventure.create(name: 'Jack the Riper', city_id: @city.id)
-      @adventure = Adventure.first
       Story.create(adventure_id: 1, description: "Starting your Jack the Ripper adventure", image_url: "http://littleatoms.com/sites/default/files/2015/jack_the_ripper_museum/jack-the-ripper-mitre-square.png", location: "co-ordinates")
-      Game.create(user_id: @user_id, adventure_id: @adventure.id)
-      @game = Game.first
     end
 
     scenario 'When we visit story page it should display a title, description and choices' do
