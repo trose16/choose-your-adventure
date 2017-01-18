@@ -1,2 +1,4 @@
 #command => rails console
 City.create(name: 'London')
+Adventure.create(name: "Jack the Ripper", city_id:1)
+Adventure.create(name: "Ancient Roman History", city_id:1)
