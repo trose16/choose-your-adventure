@@ -10,7 +10,7 @@ feature 'stories' do
       @city = City.first
       Adventure.create(name: 'Jack the Riper', city_id: @city.id)
       @adventure = Adventure.first
-      Story.create(adventure_id: 1, description: "Starting your Jack the Ripper adventure", image_url: "http://littleatoms.com/sites/default/files/2015/jack_the_ripper_museum/jack-the-ripper-mitre-square.png", location: "co-ordinates")
+      Story.create(description: "Starting your Jack the Ripper adventure", image_url: "http://littleatoms.com/sites/default/files/2015/jack_the_ripper_museum/jack-the-ripper-mitre-square.png", location: "co-ordinates")
       Game.create(user_id: @user_id, adventure_id: @adventure.id)
       @game = Game.first
     end
