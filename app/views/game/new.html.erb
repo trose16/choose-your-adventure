@@ -1,6 +1,6 @@
 <%= "Hello, #{@user.username}!" %><br>
 
-<form name="choose">
+<form name="choose" action=game_path>
   <h3>Choose city</h3>
     <select name="cities" id="cities_from_model">
       <option>Choose city</option>
@@ -8,8 +8,5 @@
         <option value=<%= city.id %>><%= city.name %></option>
       <% end %>
     </select>
+    <input type="submit" value="Submit">
 </form>
-
-<div class="result">
-<p id="result1"></p>
-</div>
