@@ -1,8 +1,8 @@
 <div>
-
+  <h2>#<%= @story.title %></h2>
   <img src="<%= @story.image_url %>" alt="<%= @story.id %> picture" width="450" border="2">
 
-  <p><%= @story.description %></p>
+  <p class="story-description"><%= @story.description %></p>
 
 
   <iframe
@@ -14,13 +14,11 @@
 </iframe>
 <!-- we need to change the origin and the destination to our locations -->
 
-  
-  <p>
-    <% @story.choices.each do |choice| %>
-      <form method="get" action="/story/<%=choice.next_story_id%>">
-        <button type="submit"><%= choice.description %></button>
-      </form>
-    <% end %>
-  </p>  
-  
+  <p><% @story.choices.each do |choice| %>
+          <form method="get" action="/story/<%=choice.next_story_id%>">
+              <button type="submit"><%= choice.description %></button>
+          </form>
+     <% end %>
+  </p>
+
 </div>

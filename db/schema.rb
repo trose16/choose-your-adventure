@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170117203537) do
+ActiveRecord::Schema.define(version: 20170118184654) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,10 +51,9 @@ ActiveRecord::Schema.define(version: 20170117203537) do
     t.text     "description"
     t.text     "image_url"
     t.text     "location"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.integer  "adventure_id"
-    t.index ["adventure_id"], name: "index_stories_on_adventure_id", using: :btree
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.text     "title"
   end
 
   create_table "users", force: :cascade do |t|
@@ -79,5 +78,4 @@ ActiveRecord::Schema.define(version: 20170117203537) do
   add_foreign_key "choices", "stories"
   add_foreign_key "games", "adventures"
   add_foreign_key "games", "users"
-  add_foreign_key "stories", "adventures"
 end
