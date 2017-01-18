@@ -2,6 +2,19 @@ require 'rails_helper'
 
 
 feature 'stories' do
+
+  context 'Visiting the index page' do
+
+    before do
+      sign_up('Tudor', 'tudor@email.com', '123456')
+    end
+
+    scenario "i want to see a start adventure button" do
+      visit '/'
+      expect(page).to have_content 'Start adventure'
+    end
+
+  end
   context 'Visiting story profile page' do
     before do
       sign_up('Tudor', 'tudor@email.com', '123456')

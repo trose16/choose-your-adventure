@@ -6,7 +6,5 @@ Rails.application.routes.draw do
        }
 
   root 'story#index'
-  resources :story, only:[:show]
-
-
+  resources :story, only:[:show, :index]
 end
