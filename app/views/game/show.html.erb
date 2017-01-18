@@ -1,0 +1,8 @@
+<h2> <%= @city.name %> Adventures:</h2>
+<form  action=game_path>
+  <% @city.adventures.each do |adventure| %>
+    <input type="radio" name="adventure" value=<%= adventure.id %>><%= adventure.name %><br>
+  <% end %>
+  <br>
+  <input type="submit" value="Submit">
+</form>

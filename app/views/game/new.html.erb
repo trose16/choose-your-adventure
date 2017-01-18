@@ -1,10 +1,12 @@
 <%= "Hello, #{@user.username}!" %><br>
 
-<div>
+<form name="choose" action=game_path>
   <h3>Choose city</h3>
-  <select id="cities">
-    <option>London</option>
-    <option>Tokyo</option>
-    <option>Paris</option>
-  </select>
-</div>
+    <select name="cities" id="cities_from_model">
+      <option>Choose city</option>
+      <% @cities.each do |city| %>
+        <option value=<%= city.id %>><%= city.name %></option>
+      <% end %>
+    </select>
+    <input type="submit" value="Submit">
+</form>
