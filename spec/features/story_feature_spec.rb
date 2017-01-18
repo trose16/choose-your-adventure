@@ -13,7 +13,6 @@ feature 'stories' do
       Story.create(adventure_id: 1, description: "Starting your Jack the Ripper adventure", image_url: "http://littleatoms.com/sites/default/files/2015/jack_the_ripper_museum/jack-the-ripper-mitre-square.png", location: "co-ordinates")
       Game.create(user_id: @user_id, adventure_id: @adventure.id)
       @game = Game.first
-      byebug
     end
 
     scenario 'When we visit story page it should display a title, description and choices' do
