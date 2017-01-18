@@ -2,4 +2,20 @@
   <p><%= @story.description %></p>
   <p><%= @story.image_url %></p>
   <p><%= @story.location %></p>
+
+  <p><% @story.choices.each do |choice| %>
+          <form method="get" action="/story/<%=choice.next_story_id%>">
+              <button type="submit"><%= choice.description %></button>
+          </form>
+     <% end %>
+  </p>
+
+
+
+
+  <!-- <% @story.choices.each do |button| %> -->
+
+  <!-- <% end %> -->
+
+
 </div>
