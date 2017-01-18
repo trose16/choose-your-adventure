@@ -5,9 +5,7 @@ Rails.application.routes.draw do
          registrations: 'users/registrations'
        }
 
-  root 'game#index'
-
-  resources :game, only:[:index, :new, :create, :show]
-  resources :story, only:[:show]
-
+  root 'story#index'
+  resources :story, only:[:show, :index]  
+  
 end
