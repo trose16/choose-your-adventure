@@ -7,7 +7,6 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
 
-
   def passthru
     super
   end
