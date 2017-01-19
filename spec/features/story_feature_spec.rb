@@ -31,10 +31,7 @@ feature 'stories' do
       @story = Story.create(description: "Starting your Jack the Ripper adventure", image_url: "http://littleatoms.com/sites/default/files/2015/jack_the_ripper_museum/jack-the-ripper-mitre-square.png", location: "co-ordinates")
       @next_story = Story.create(description: "Visit the Jack the Ripper Museum", image_url: "http://i.huffpost.com/gen/3577686/thumbs/o-JACK-THE-RIPPER-MUSEUM-570.jpg", location: "E1 6LT")
       @choice = Choice.create(description: "Play it safe", next_story_id: 1, story_id: 1)
-
     end
-
-
 
     scenario 'When we visit story page it should display a title, description and choices' do
       visit("/story/1")
