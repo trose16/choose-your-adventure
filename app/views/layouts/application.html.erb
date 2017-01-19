@@ -5,9 +5,11 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Butcherman" rel="stylesheet">
   </head>
   <body>
     <% if user_signed_in? %>
+      <h3>Jack the Ripper</h3>
       <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
     <% else %>
       <%= link_to 'Sign in', new_user_session_path  %>
