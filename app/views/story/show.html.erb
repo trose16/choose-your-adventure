@@ -10,10 +10,6 @@
   </p>
 </div>
 
-<div id='arrived'>
-  <a href=# id='arrived-link'>I've arrived</a>
-</div>
-
 <script>
   $(document).ready(function() {
     $('#story').hide();
@@ -33,3 +29,8 @@
     target="_self"
     src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDQKXO9f-HxA4jXlT9n3oeicfffba4oM30&origin=<%=@story_location%>&destination=<%=@story_location%>&avoid=tolls|highways&mode=walking" allowfullscreen>
 </iframe>
+
+
+<div id='arrived'>
+  <a href=# id='arrived-link'>I've arrived</a>
+</div>
