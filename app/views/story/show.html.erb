@@ -10,26 +10,23 @@
   </p>
 </div>
 
-<div id='test'>
-  Hello
-</div>
 <div id='arrived'>
-  <%= link_to "I've arrived" %>
+  <a href=# id='arrived-link'>I've arrived</a>
 </div>
 
 <script>
   $(document).ready(function() {
-    $('#test').css('color', 'red');
     $('#story').hide();
     $('#arrived').on('click', function(event){
       event.preventDefault();
       $('#story').show();
+      $('#map').hide();
+      $('#arrived-link').hide();
     })
   })
-
 </script>
 
-  <iframe
+  <iframe id='map'
     width="450"
     height="250"
     frameborder="0" style="border:0"
