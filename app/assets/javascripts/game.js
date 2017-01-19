@@ -5,11 +5,12 @@ $(document).ready(function() {
   	var indx = document.choose.cities.selectedIndex;
   	var val = document.choose.cities.options[indx].value;
 
-  	if(indx != 0 ){ // to ignore first choice
+  	if(indx != 0 ){
   		document.getElementById('result1').innerHTML = val;
   	}else{
   		alert("Please select city");
   	}
   }
+
 
 })
