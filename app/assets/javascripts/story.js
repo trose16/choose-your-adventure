@@ -1,8 +1,3 @@
-$(document).ready(function() {
-
-  var button1 = document.getElementById("arrive");
-  button1.addEventListener = function("click", function(){
-    document.getElementById("test").innerHTML = "HI"
-  })
-
-})
+// # Place all the behaviors and hooks related to the matching controller here.
+// # All this logic will automatically be available in application.js.
+// # You can use CoffeeScript in this file: http://coffeescript.org/

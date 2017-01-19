@@ -1,24 +1,35 @@
-<div>
+<div id='story'>
   <h2>#<%= @story.title %></h2>
   <img src="<%= @story.image_url %>" alt="<%= @story.id %> picture" width="450" border="2">
-
   <p class="story-description"><%= @story.description %></p>
+  <p><% @story.choices.each do |choice| %>
+    <form method="get" action="/story/<%=choice.next_story_id%>">
+      <button type="submit"><%= choice.description %></button>
+    </form>
+    <% end %>
+  </p>
+</div>
 
+<div id='arrived'>
+  <a href=# id='arrived-link'>I've arrived</a>
+</div>
 
-  <iframe
+<script>
+  $(document).ready(function() {
+    $('#story').hide();
+    $('#arrived').on('click', function(event){
+      event.preventDefault();
+      $('#story').show();
+      $('#map').hide();
+      $('#arrived-link').hide();
+    })
+  })
+</script>
+
+  <iframe id='map'
     width="450"
     height="250"
     frameborder="0" style="border:0"
     target="_self"
-    src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDQKXO9f-HxA4jXlT9n3oeicfffba4oM30&origin=Peticoat+Lane&destination=Spitalfields+Market&avoid=tolls|highways&mode=walking" allowfullscreen>
+    src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDQKXO9f-HxA4jXlT9n3oeicfffba4oM30&origin=<%=@story_location%>&destination=<%=@story_location%>&avoid=tolls|highways&mode=walking" allowfullscreen>
 </iframe>
-<!-- we need to change the origin and the destination to our locations -->
-
-  <p><% @story.choices.each do |choice| %>
-          <form method="get" action="/story/<%=choice.next_story_id%>">
-              <button type="submit"><%= choice.description %></button>
-          </form>
-     <% end %>
-  </p>
-
-</div>
