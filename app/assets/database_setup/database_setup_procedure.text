@@ -1,4 +1,8 @@
 #command => rails console
-City.create(name: 'London')
-Adventure.create(name: "Jack the Ripper", city_id:1)
-Adventure.create(name: "Ancient Roman History", city_id:1)
+Story.create(title: "SPITALFIELDS MARKET", description: "Mary Ann Nichols, 43, a domestic servant and possible prostitute, is seen leaving a pub near Spitalfields, drunk and short of the fourpence required for a bed for the night. She has reportedly said she plans to earn this on the street, with the help of her new bonnet. She is widely believed to be the Ripper’s first victim — unless you can stop him in time.", image_url: "http://littleatoms.com/sites/default/files/2015/jack_the_ripper_museum/jack-the-ripper-mitre-square.png", location: "SPITALFIELDS+MARKET")
+Story.create(title: "DURWARD STREET (FORMERLY BUCK'S ROW)", description: "You discover Mary Ann Nichols on the ground. You’re too late. One onlooker says he saw a mysterious figure follow two women towards CHRIST CHURCH, SPITALFIELDS Another says a suspicious man with a sinister package was seen heading towards THRAWL STREET. Follow your gut.", image_url: "http://littleatoms.com/sites/default/files/2015/jack_the_ripper_museum/jack-the-ripper-mitre-square.png", location: "DURWARD+STREET")
+
+Choice.create(description: "If you want to take the risky route, go to DURWARD STREET", next_story_id:2, story_id:1)
+Choice.create(description: "If you’d like to play it safe, go to BRICK LANE", next_story_id:3, story_id:1)
+Choice.create(description: "Follow the woman towards CHRIST CHURCH", next_story_id:4, story_id:2)
+Choice.create(description: "Follow the man towards THRAWL STREET", next_story_id:5, story_id:2)
