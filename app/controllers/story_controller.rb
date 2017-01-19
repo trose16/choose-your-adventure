@@ -7,6 +7,7 @@ class StoryController < ApplicationController
   def show
     @story = Story.find(params[:id])
     @choices = @story.choices
+    @story_location = @story.location
   end
 
   private
