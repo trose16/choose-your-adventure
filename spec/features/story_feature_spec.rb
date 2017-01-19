@@ -40,6 +40,8 @@ feature 'stories' do
 
     end
 
+    scenario ''
+
     scenario 'When we visit story page it should display a title, description and choices' do
       visit("/story/1")
       expect(page).to have_content("Starting your Jack the Ripper adventure")

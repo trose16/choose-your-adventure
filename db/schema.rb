@@ -18,8 +18,9 @@ ActiveRecord::Schema.define(version: 20170118184654) do
   create_table "adventures", force: :cascade do |t|
     t.string   "name"
     t.integer  "city_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.text     "description"
     t.index ["city_id"], name: "index_adventures_on_city_id", using: :btree
   end
 
@@ -51,9 +52,11 @@ ActiveRecord::Schema.define(version: 20170118184654) do
     t.text     "description"
     t.text     "image_url"
     t.text     "location"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "adventure_id"
     t.text     "title"
+    t.index ["adventure_id"], name: "index_stories_on_adventure_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -78,4 +81,5 @@ ActiveRecord::Schema.define(version: 20170118184654) do
   add_foreign_key "choices", "stories"
   add_foreign_key "games", "adventures"
   add_foreign_key "games", "users"
+  add_foreign_key "stories", "adventures"
 end
