@@ -14,3 +14,8 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+  background-color: #033649;
+  font-family: 'Josefin Sans', sans-serif;
+}
