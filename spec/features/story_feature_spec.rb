@@ -32,12 +32,11 @@ feature 'stories' do
       @user = User.first
       City.create(name: "London")
       @city = City.first
-      Adventure.create(name: 'Jack the Riper', city_id: @city.id)
+      Adventure.create(name: 'Jack the Ripper', city_id: @city.id)
       @adventure = Adventure.first
       @story = Story.create(adventure_id: @adventure.id, description: "Starting your Jack the Ripper adventure", image_url: "http://littleatoms.com/sites/default/files/2015/jack_the_ripper_museum/jack-the-ripper-mitre-square.png", location: "co-ordinates")
       @next_story = Story.create(adventure_id: @adventure.id, description: "Visit the Jack the Ripper Museum", image_url: "http://i.huffpost.com/gen/3577686/thumbs/o-JACK-THE-RIPPER-MUSEUM-570.jpg", location: "E1 6LT")
       @choice = Choice.create(description: "Play it safe", next_story_id: @next_story.id, story_id: @story.id)
-
     end
 
     scenario 'When we visit story page it should display a title, description and choices' do
