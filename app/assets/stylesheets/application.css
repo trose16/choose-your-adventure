@@ -73,8 +73,16 @@ h1 {
   float: right;
   margin-right: 10px;
 }
+
+#signin-signup {
+  margin-top: 100px;
+  align: "middle";
+}
+
 #title-links-wrapper {
   display: inline;
+  width: 90%;
+  margin-top: 20px;
 }
 #title-sign-out {
   /*display: inline-block;*/
