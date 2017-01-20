@@ -1,38 +1,48 @@
-<div id='story'>
-  <h2>#<%= @story.title %></h2>
-  <img src="<%= @story.image_url %>" alt="<%= @story.id %> picture" width="450" border="2">
-  <p class="story-description"><%= @story.description %></p>
-  <p><% @story.choices.each do |choice| %>
-    <div class="button-container">
-    <form method="get" action="/story/<%=choice.next_story_id%>">
-      <button class="btn-choices" type="submit"><%= choice.description %></button>
-    </form>
-  </div>
-    <% end %>
-  </p>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Anton|Butcherman|Droid+Serif|Fjalla+One|Montserrat|Overpass|Permanent+Marker" rel="stylesheet">
+</head>
 
-<script>
+<body>
+  <div id='story-wrapper'>
+    <img src="<%= @story.image_url %>" alt="<%= @story.id %> picture" width="450" border="2">
+    <h2 class="story-title"><%= @story.title %></h2>
+    <p class="story-description"><%= @story.description %></p>
+    <p><% @story.choices.each do |choice| %>
+      <div class="button-container">
+        <form method="get" action="/story/<%=choice.next_story_id%>">
+          <button class="btn-choices" type="submit"><%= choice.description %></button>
+        </form>
+      </div>
+      <% end %>
+    </p>
+  </div>
+
+  <script>
   $(document).ready(function() {
-    $('#story').hide();
+    $('#story-wrapper').hide();
     $('#arrived').on('click', function(event){
       event.preventDefault();
-      $('#story').show();
+      $('#story-wrapper').show();
       $('#map').hide();
       $('#arrived-link').hide();
     })
   })
-</script>
+  </script>
 
   <iframe class="testing-map-css" id='map'
-    width="450"
-    height="250"
-    frameborder="0" style="border:0"
-    target="_self"
-    src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDQKXO9f-HxA4jXlT9n3oeicfffba4oM30&origin=<%=@story_location%>&destination=<%=@story_location%>&avoid=tolls|highways&mode=walking" allowfullscreen>
+  width="450"
+  height="250"
+  frameborder="0" style="border:0"
+  target="_self"
+  src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDQKXO9f-HxA4jXlT9n3oeicfffba4oM30&origin=<%=@story_location%>&destination=<%=@story_location%>&avoid=tolls|highways&mode=walking" allowfullscreen>
 </iframe>
 
 
 <div id='arrived'>
   <a href=# id='arrived-link'>I've arrived</a>
 </div>
+
+</body>
+</html>

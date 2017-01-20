@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ChooseYourAdventure</title>
+    <title>Choose Your Adventure</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/css?family=Butcherman" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Butcherman|Droid+Serif|Fjalla+One|Montserrat|Overpass|Permanent+Marker" rel="stylesheet">
   </head>
   <body>
-    <% if user_signed_in? %>
-      <h3 id="page_title">Jack the Ripper Tour</h3>
-      <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to 'Sign in', new_user_session_path  %>
-      <%= link_to 'Sign up', new_user_registration_path %>
-    <% end %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div id='title-links-wrapper'>
+      <% if user_signed_in? %>
+        <div id='title-sign-out' >
+          <h1 id="page_title">Jack the Ripper Tour</h1>
+          <%= link_to 'Sign out', destroy_user_session_path, method: :delete, id: 'sign-out' %>
+        </div>
+      <% else %>
+        <%= link_to 'Sign in', new_user_session_path  %>
+        <%= link_to 'Sign up', new_user_registration_path %>
+      <% end %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
     <%= yield %>
   </body>
 </html>

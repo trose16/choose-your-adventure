@@ -2,17 +2,25 @@ body {
   font-family: "Helvetica", Sans-serif;
   background-color: #033649;
   margin-left: 100px;
-  background-image: url
+  margin-right: 100px;
+  background-image: url;
+  width: 90%;
 }
 
 img {
   width: 90%;
-
 }
 
 iframe {
+  margin-top: 50px;
   width: 90%;
   height: 550px;
+}
+
+p {
+  font-family: 'Droid Serif', serif;
+  line-height: 400%;
+  color: #fff;
 }
 
 .story-description {
@@ -26,7 +34,7 @@ iframe {
 
 }
 
-button.btn-choices {
+.btn-choices {
   background-color: #2dd2a8;
   padding: 5px;
   margin: 5px;
@@ -38,11 +46,11 @@ button.btn-choices {
 }
 
 
-h3 {
+h1 {
+  font-size: 150px;
   padding: 0 10%;
   margin: 0;
   color: #C90E17;
-  font-size: 26;
   text-align: centre;
   font-weight: normal;
   font-family: 'Butcherman', cursive;
@@ -60,9 +68,43 @@ h3 {
     font-size: 16px;
 }
 
-a:link{ color: #fff; text-decoration:none }
+#sign-out {
+  font-size: 20px;
+  float: right;
+  margin-right: 10px;
+}
+#title-links-wrapper {
+  display: inline;
+}
+#title-sign-out {
+  /*display: inline-block;*/
+}
+
+#page_title {
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  font-size: 50px;
+}
+
+#start-adventure {
+  float: center;
+  color: red;
+}
+
+#story {
+
+}
+
+a {
+  font-size: 30px;
+}
+
+a:link{
+  color: #fff; text-decoration:none
+}
 a:visited{ color: #fff; text-decoration:none }
-a:hover{ color: #fff; text-decoration:none }
+a:hover{ color: #666; text-decoration:none }
 a:active{ color: #fff; text-decoration:none }
 
 

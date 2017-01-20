@@ -1,9 +1,26 @@
-<% if user_signed_in?  %>
-  <h2>CATCH THE RIPPER!</h2>
-  <img src='/assets/london-ripper.jpg' width="450">
-  <div class="story-description">
-    <p>In 1888, as summer slipped away, and days grew shorter and nights longer and colder, a ruthless serial killer stalked the vice-ridden streets of East London, slaughtering women with gruesome abandon and eerie stealth. To this day, his identity remains a mystery. We only know the names of his victims… and that he called himself Jack the Ripper.</p>
-    <p>This adventure transports you back in time and will guide you around the Ripper’s haunts. You have the chance to catch him in the act, stop him in his tracks and discover his identity once and for all… but can you survive when so many have met a bloody end?</p>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Anton|Butcherman|Droid+Serif|Fjalla+One|Montserrat|Overpass|Permanent+Marker" rel="stylesheet"> 
+</head>
+
+<body>
+  <div id='index-page-wrapper' >
+    <% if user_signed_in?  %>
+    <img src='/assets/london-ripper.jpg' width="450">
+    <h2>CATCH THE RIPPER!</h2>
+    <div class="index-content">
+      <p>
+        In 1888, as summer slipped away, and days grew shorter and nights longer and colder, a ruthless serial killer stalked the vice-ridden streets of East London, slaughtering women with gruesome abandon and eerie stealth. To this day, his identity remains a mystery. We only know the names of his victims… and that he called himself Jack the Ripper.
+      </p>
+      <p>
+        This adventure transports you back in time and will guide you around the Ripper’s haunts. You have the chance to catch him in the act, stop him in his tracks and discover his identity once and for all… but can you survive when so many have met a bloody end?
+      </p>
+    </div>
+    <div id='start-adventure'>
+      <%= link_to 'Start adventure', story_path(1)%>
+    </div>
+    <% end %>
   </div>
-  <%= link_to 'Start adventure', story_path(1)%>
-<% end %>
+
+  </body>
+</html>
