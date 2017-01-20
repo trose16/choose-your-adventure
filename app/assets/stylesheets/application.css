@@ -1,14 +1,36 @@
-body{
+body {
   font-family: "Helvetica", Sans-serif;
+  background-color: #033649;
+  margin-left: 100px;
+  background-image: url
 }
-.story-description{
+
+.story-description {
   width: 450px;
   word-wrap: break-word;
 }
 
+button.btn-choices {
+  background-color: #2dd2a8;
+  padding: 5px;
+  margin: 5px;
+  float: left;
+  color: #ffffff;
+  font-size: 20px;
+  border: none;
+  width: 227px; height: 50px;
+}
 
 
-h3 { font-family: 'Butcherman', cursive; }
+h3 {
+  padding: 0 10%;
+  margin: 0;
+  color: #C90E17;
+  font-size: 26;
+  text-align: centre;
+  font-weight: normal;
+  font-family: 'Butcherman', cursive;
+}
 
 
 .start {
@@ -21,6 +43,12 @@ h3 { font-family: 'Butcherman', cursive; }
     display: inline-block;
     font-size: 16px;
 }
+
+a:link{ color: #fff; text-decoration:none }
+a:visited{ color: #fff; text-decoration:none }
+a:hover{ color: #fff; text-decoration:none }
+a:active{ color: #fff; text-decoration:none }
+
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

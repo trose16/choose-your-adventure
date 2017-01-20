@@ -3,8 +3,8 @@
   <img src="<%= @story.image_url %>" alt="<%= @story.id %> picture" width="450" border="2">
   <p class="story-description"><%= @story.description %></p>
   <p><% @story.choices.each do |choice| %>
-    <form method="get" action="/story/<%=choice.next_story_id%>">
-      <button type="submit"><%= choice.description %></button>
+    <form  method="get" action="/story/<%=choice.next_story_id%>">
+      <button class="btn-choices" type="submit"><%= choice.description %></button>
     </form>
     <% end %>
   </p>
@@ -22,7 +22,7 @@
   })
 </script>
 
-  <iframe id='map'
+  <iframe class="testing-map-css" id='map'
     width="450"
     height="250"
     frameborder="0" style="border:0"
