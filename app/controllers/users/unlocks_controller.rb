@@ -1,7 +1,9 @@
 class Users::UnlocksController < Devise::UnlocksController
   def new
     super
-  en  def create
+  end
+
+  def create
     super
   end
 
